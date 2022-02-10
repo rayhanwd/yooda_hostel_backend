@@ -8,7 +8,7 @@ const studentSchema = new Schema({
     },
     fullName: {
         type: String,
-        required: true
+        required: false
     },
     roll: {
         type: Number,
@@ -16,19 +16,19 @@ const studentSchema = new Schema({
     },
     age: {
         type: Number,
-        required: true
+        required: false
     },
     class: {
         type: String,
-        required: true
+        required: false
     },
     hall: {
         type: String,
-        required: true
+        required: false
     },
     status: {
         type: String,
-        required: true
+        required: false
     },
 },
     {
