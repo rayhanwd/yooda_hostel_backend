@@ -7,9 +7,10 @@ module.exports.createFood = async function (req, res) {
 };
 
 module.exports.getFood = async function (req, res) {
-    const PAGE_SIZE = 3;
+    const PAGE_SIZE = 10;
     const PAGE_NUMBER = parseInt(req.query.page || "0");
-    const foods = await foodService.getFood(PAGE_SIZE,PAGE_NUMBER);
+    const searchQuery = req.query.foodname || ""; 
+    const foods = await foodService.getFood(PAGE_SIZE, PAGE_NUMBER, searchQuery);
     return res.json(foods);
 };
 
